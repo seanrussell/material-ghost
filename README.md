@@ -8,6 +8,10 @@ True to material design, the main font is Roboto.
 
 Other icons provided by [Material Icons](http://google.github.io/material-design-icons/).
 
+## What's New?
+
+_[Meterial Demo](http://material-theme.seandrussell.com) is always running the latest version of Material. You can preview all new features there._
+
 ## Releases
 
 See the [changelog](CHANGELOG.md) for release details.
