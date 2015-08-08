@@ -1,0 +1,14 @@
+{{! Tag header}}
+<div class="mdl-card mdl-cell mdl-cell--8-col" id="{{id}}">
+	<div class="mdl-card__media mdl-color-text--grey-50 {{#if tag.image}}" style="background-image: url({{tag.image}}){{else}}no-image{{/if}}">
+	  <h3>Tag: {{tag.name}}</h3>
+	</div>
+	<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+	  <span>Total {{plural pagination.total empty='0 Post' singular='% Post' plural='% Posts'}}</span>
+	  {{#if tag.description}}
+	  <div class="tag-description">
+        {{tag.description}}
+	  </div>
+	  {{/if}} 
+	</div>
+</div>

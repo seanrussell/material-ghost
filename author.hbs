@@ -1,0 +1,49 @@
+{{!< default}}
+{{! Tag}}
+<div class="demo-blog__posts mdl-grid">
+
+  {{> cover-author }}
+  {{> about-blog }}
+          
+  {{#foreach posts}}
+      {{#has tag="quote"}}
+        <div class="mdl-card quote mdl-cell mdl-cell--12-col">
+          <div class="mdl-card__title mdl-color-text--grey-50">
+            <h3 class="quote"><a href="{{url}}">{{title}}</a></h3>
+          </div>
+          <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo" style="background-image: url({{#if author.image}}{{author.image}}{{else}}{{asset "images/default-user.gif"}}{{/if}})"></div>
+              <div>
+                {{#author}}
+			    <strong><a href="{{url}}">{{name}}</a></strong>
+			    {{/author}}
+                <span>{{date format="DD MMM YYYY"}}</span>
+              </div>
+          </div>
+        </div>
+      {{else}}
+        <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" id="{{id}}">
+          <div class="mdl-card__media mdl-color-text--grey-50 {{#if image}}" style="background-image: url({{image}}){{else}}no-image{{/if}}">
+            <h3><a href="{{url}}">{{title}}</a></h3>
+          </div>
+          <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+            {{excerpt words="25"}}
+          </div>
+          <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo" style="background-image: url({{#if author.image}}{{author.image}}{{else}}{{asset "images/default-user.gif"}}{{/if}})"></div>
+              <div>
+                {{#author}}
+			    <strong><a href="{{url}}">{{name}}</a></strong>
+			    {{/author}}
+                <span>{{date format="DD MMM YYYY"}}</span>
+              </div>
+          </div>
+        </div>
+      {{/has}}
+
+  {{/foreach}}
+
+  {{pagination}}
+</div>
+
+

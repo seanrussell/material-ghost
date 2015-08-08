@@ -1,0 +1,29 @@
+{{! Previous and next article links}}
+<div class="prev-next-wrap mdl-grid">
+	{{#next_post}}
+	<div class="mdl-cell mdl-cell--6-col">
+		<a class="previous-post" href="{{url}}">
+			<div class="prev-next-inner">
+				<div class="prev-icon">
+					<i class="material-icons">arrow_back</i>
+				</div>
+				<span class="link-text">Previous</span>
+				<h4 class="title">{{title}}</h4>
+			</div>
+		</a>
+	</div>
+	{{/next_post}}
+    {{#prev_post}}
+    <div class="mdl-cell mdl-cell--6-col">
+	    <a class="next-post" href="{{url}}">
+			<div class="prev-next-inner">
+				<div class="prev-icon">
+					<i class="material-icons">arrow_forward</i>
+				</div>
+				<span class="link-text">Next</span>
+				<h4 class="title">{{title}}</h4>
+			</div>
+		</a>
+	</div>
+    {{/prev_post}}
+</div>

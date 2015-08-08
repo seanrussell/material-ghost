@@ -1,0 +1,32 @@
+{{! Stylesheets }}
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{{! Material color theme stylesheet }}
+{{! Customize colors: material.<primary>-<accent>.min.css }}
+{{! For more information: http://www.getmdl.io/customize/index.html }}
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.light_green-deep_orange.min.css" />
+
+{{! Making the blog cover image span the background of the body}}
+<style>
+{{#if @blog.cover}}
+	body::before {
+		background-image: url({{@blog.cover}});
+		background-size: cover;
+		background-attachment: fixed;
+		content: '';
+		will-change: transform;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		position: fixed;
+		opacity: 0.8;
+	}
+{{/if}}
+</style>
+
+{{! Specific styles for the material ghost theme}}
+<link rel="stylesheet" href="{{asset "css/screen.css"}}">

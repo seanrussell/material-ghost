@@ -1,0 +1,22 @@
+{{! Tag header}}
+<div class="mdl-card mdl-cell mdl-cell--8-col" id="{{id}}">
+	<div class="mdl-card__media mdl-color-text--grey-50 {{#if author.image}}" style="background-image: url({{author.image}}){{else}}no-image{{/if}}">
+	  <h3>{{author.name}}</h3>
+	</div>
+	<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+	  <div class="details">
+		  <span class="post-count">
+		  	{{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}
+		  </span>
+		  {{#if author.location}}
+		    <span class="location">{{author.location}}</span>
+		  {{/if}}
+		  {{#if author.website}}
+			<span class="website"><a href="{{author.website}}" targer="_BLANK">Website</a></span>
+		  {{/if}}
+	  </div>
+	  {{#if author.bio}}
+		<div class="bio">{{author.bio}}</div>
+	  {{/if}}
+	</div>
+</div>

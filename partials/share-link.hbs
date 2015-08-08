@@ -1,0 +1,27 @@
+{{! Article share links}}
+<div class="share-wrap">
+	<div class="share-wrap-inner clearfix">
+		<ul>
+			<!-- facebook -->
+			<li>
+				<button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}', 'facebook-share','width=580,height=296');return false;"></button>
+			</li>
+			<!-- twitter -->
+			<li>
+				<button class="mdl-mini-footer--social-btn social-btn social-btn__twitter" onclick="window.open('https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}', 'twitter-share', 'width=550,height=235');return false;"></button>
+			</li>
+			<!-- google plus -->
+			<li>
+				<button class="mdl-mini-footer--social-btn social-btn social-btn__gplus" onclick="window.open('https://plus.google.com/share?url={{url absolute="true"}}', 'google-plus-share', 'width=490,height=530');return false;"></button>
+			</li>
+			<!-- linkedin -->
+			<li>
+				<button class="mdl-mini-footer--social-btn social-btn social-btn__linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}', 'linkedin-share', 'width=490,height=530');return false;"></button>
+			</li>
+			<!-- pinterest -->
+			<li>
+				<button class="mdl-mini-footer--social-btn social-btn social-btn__pinterest" onclick="window.open('https://pinterest.com/pin/create/button/?url={{url absolute="true"}}&media=&description={{encode title}}', 'pinterest-share', 'width=490,height=530');return false;"></button>
+			</li>
+		</ul>
+	</div>
+</div>

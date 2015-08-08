@@ -1,0 +1,39 @@
+{{! About Blog }}
+<div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
+  
+  <button id="fab-main" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent site-head fab-button">
+    <i class="material-icons mdl-color-text--white">add</i>
+  </button>
+        
+  {{> main-navigation}}
+         
+  <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
+    {{#if @blog.logo}}
+      <a class="image-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+    {{else}}
+      <a href="{{@blog.url}}">{{@blog.title}}</a>
+    {{/if}}
+
+    {{#if @blog.description}}
+    <div class="description">
+      {{@blog.description}}
+    </div>
+    {{/if}}
+
+  </div>
+  <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+    <div>
+      <strong>{{@blog.title}}</strong>
+    </div>
+
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menubtn">
+      <li class="mdl-menu__item" onclick="window.location='http://www.twitter.com'"><button class="mdl-mini-footer--social-btn social-btn social-btn__twitter"></button><span class="social-text">Twitter</span></li>
+      <li class="mdl-menu__item" onclick="window.location='http://www.facebook.com'"><button class="mdl-mini-footer--social-btn social-btn social-btn__facebook" ></button><span class="social-text">Facebook</span></li>
+      <li class="mdl-menu__item" onclick="window.location='http://www.googleplus.com'"><button class="mdl-mini-footer--social-btn social-btn social-btn__gplus"></button><span class="social-text">Google+</span></li>
+    </ul>
+
+    <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+      <i class="material-icons">more_vert</i>
+    </button>
+  </div>
+</div>

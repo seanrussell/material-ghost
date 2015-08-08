@@ -1,0 +1,18 @@
+{{!< default}}
+<div class="demo-blog__posts mdl-grid">
+  {{#post}}
+  <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__media mdl-color-text--grey-50 {{#if image}}" style="background-image: url({{image}}){{else}}no-image{{/if}}">
+      <h3>{{title}}</h3>
+    </div>
+    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+      
+    </div>
+    <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+      <div class="content-wrapper post">
+      {{content}}
+      </div>
+    </div>
+  </div>
+  {{/post}}
+</div>
